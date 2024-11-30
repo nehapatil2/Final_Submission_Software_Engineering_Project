@@ -5,9 +5,9 @@ A `requirements.txt` file is typically used in Python projects to specify depend
 # Requirements for Responsive Blog Platform
 
 ### Server Environment
-- **Web Server**: Apache (Recommended: XAMPP, WAMP, or LAMP stack)
-- **Database**: MySQL or MariaDB
-- **PHP Version**: 7.4 or later
+- Web Server: Apache (Recommended: XAMPP, WAMP, or LAMP stack)
+- Database: MySQL or MariaDB
+- PHP Version: 7.4 or later
 
 ### PHP Extensions
 Ensure the following extensions are enabled:
@@ -18,17 +18,17 @@ Ensure the following extensions are enabled:
 - curl
 
 ### Development Tools
-- **Version Control**: Git
-- **IDE/Editor**: Visual Studio Code (or any preferred text editor with PHP and JavaScript support)
-- **Testing Tools**: 
+- Version Control: Git
+- IDE/Editor: Visual Studio Code (or any preferred text editor with PHP and JavaScript support)
+- Testing Tools: 
   - PHPUnit (for PHP unit testing)
   - Selenium WebDriver (for automated browser testing)
   - BrowserStack (for cross-browser and cross-device testing)
 
 ### Frontend Libraries
-- **CSS Frameworks**: Bootstrap (Recommended for responsive design)
-- **JavaScript**: Native JavaScript (ES6+)
-- **Optional Libraries**: jQuery (if used in the project)
+- CSS Frameworks: Bootstrap (Recommended for responsive design)
+- JavaScript: Native JavaScript (ES6+)
+- Optional Libraries: jQuery (if used in the project)
 
 ### Social Media Integration
 - Facebook API for the commenting system:
