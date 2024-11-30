@@ -120,15 +120,3 @@ Contributions are welcome! Follow these steps to contribute:
 
 This project is licensed under the [MIT License](LICENSE).
 
----
-
-## Acknowledgments
-
-This project was developed as part of a **Software Engineering Final Submission** under the guidance of our mentors. Special thanks to all contributors and testers who made this project possible.
-```
-
-### Tips
-- Replace placeholder paths, file names, or instructions with specifics from your repository structure (e.g., update `config.php` if your config file is named differently).
-- Add any missing details if you have more features or dependencies.
-
- 
