@@ -10,30 +10,30 @@ This repository contains the source code for a **Responsive Blog Platform**, dev
 ## Features
 
 ### Core Features
-- **Responsive Design**: Optimized for all screen sizes using CSS and media queries.
-- **User Authentication**: Secure login and registration system with role-based access (Admin/User).
-- **Content Management System (CMS)**:
+- Responsive Design: Optimized for all screen sizes using CSS and media queries.
+- User Authentication: Secure login and registration system with role-based access (Admin/User).
+- Content Management System (CMS):
   - Create, edit, categorize, and tag blog posts.
   - Manage posts through an intuitive admin panel.
-- **Commenting System**: Facebook integration for seamless user engagement.
-- **Admin Panel**: Centralized dashboard for managing posts, categories, and tags.
+- Commenting System: Facebook integration for seamless user engagement.
+- Admin Panel: Centralized dashboard for managing posts, categories, and tags.
 
 ### Enhancements
-- **Rich Text Editor**: Enhanced content formatting capabilities.
-- **Search Functionality**: Quickly find posts by keywords.
-- **Tags and Categories**: Efficiently organize blog content.
+- Rich Text Editor: Enhanced content formatting capabilities.
+- Search Functionality: Quickly find posts by keywords.
+- Tags and Categories: Efficiently organize blog content.
 
 ---
 
 ## Technologies Used
 
-- **Frontend**: 
+- Frontend: 
   - HTML, CSS for structure and styling.
   - JavaScript for dynamic content and interactivity.
-- **Backend**:
+- Backend:
   - PHP for server-side logic and database management.
   - MySQL for data storage.
-- **Testing**:
+- Testing:
   - PHPUnit for unit testing.
   - BrowserStack and Selenium for cross-browser and automated testing.
 
@@ -43,21 +43,21 @@ This repository contains the source code for a **Responsive Blog Platform**, dev
 
 Follow these steps to run the platform locally:
 
-1. **Clone the Repository**:
+1. Clone the Repository:
    ```bash
-    git clone https://github.com/nehapatil2/Final_Submission_Software_Engineering_Project.git
-    cd Final_Submission_Software_Engineering_Project
+      git clone https://github.com/nehapatil2/Final_Submission_Software_Engineering_Project.git
+      cd Final_Submission_Software_Engineering_Project
    ```
 
-2. **Set Up the Environment**:
+2. Set Up the Environment:
    - Install a local development environment such as **XAMPP** or **WAMP**.
    - Start Apache and MySQL services.
 
-3. **Database Configuration**:
+3. Database Configuration:
    - Create a MySQL database for the project.
    - Import the database schema using the provided SQL file in the `database/` directory.
 
-4. **Configure the Application**:
+4. Configure the Application:
    - Open `config.php` (or similar configuration file).
    - Update database credentials:
      ```php
@@ -67,7 +67,7 @@ Follow these steps to run the platform locally:
       define('DB_NAME', 'your_database_name');
      ```
 
-5. **Run the Application**:
+5. Run the Application:
    - Place the project files in the `htdocs` directory (or equivalent for your setup).
    - Access the platform via your browser:
      ```
@@ -79,9 +79,9 @@ Follow these steps to run the platform locally:
 ## Testing the Platform
 
 The platform has undergone extensive testing:
-- **Unit Testing**: Verified individual components using PHPUnit.
-- **Cross-Browser Testing**: Ensured compatibility with Chrome, Firefox, and Safari using BrowserStack.
-- **Responsive Testing**: Validated layout and functionality across various screen sizes and devices.
+- Unit Testing: Verified individual components using PHPUnit.
+- Cross-Browser Testing: Ensured compatibility with Chrome, Firefox, and Safari using BrowserStack.
+- Responsive Testing: Validated layout and functionality across various screen sizes and devices.
 
 Test cases and results are documented in the repository.
 
@@ -89,10 +89,10 @@ Test cases and results are documented in the repository.
 
 ## Future Enhancements
 
-- **User Profiles**: Enable users to create profiles and track their activity.
-- **Advanced Analytics**: Dashboard for monitoring post views and engagement metrics.
-- **Social Media Sharing**: Simplify sharing blog posts across platforms.
-- **Moderated Comments**: Allow admins to approve, edit, or delete comments.
+- User Profiles: Enable users to create profiles and track their activity.
+- Advanced Analytics: Dashboard for monitoring post views and engagement metrics.
+- Social Media Sharing: Simplify sharing blog posts across platforms.
+- Moderated Comments: Allow admins to approve, edit, or delete comments.
 
 ---
 
