@@ -104,6 +104,16 @@ cd Final_Submission_Software_Engineering_Project
 Copy code
 composer install
 
+**Running Tests**
+1. Run all tests:
+```bash
+Copy code
+./vendor/bin/phpunit tests
+
+2. Run specific tests:
+```bash
+Copy code
+./vendor/bin/phpunit tests/UserTest.php
 
 ---
 
