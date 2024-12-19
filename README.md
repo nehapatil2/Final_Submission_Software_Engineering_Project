@@ -83,7 +83,27 @@ The platform has undergone extensive testing:
 - Cross-Browser Testing: Ensured compatibility with Chrome, Firefox, and Safari using BrowserStack.
 - Responsive Testing: Validated layout and functionality across various screen sizes and devices.
 
-Test cases and results are documented in the repository.
+**Prerequisites**
+PHP 7.4 or higher
+Composer
+PHPUnit
+
+**Installation**
+1. Clone the repository:
+```bash
+Copy code
+git clone https://github.com/yourusername/Final_Submission_Software_Engineering_Project.git
+
+2. Navigate to the project directory:
+```bash
+Copy code
+cd Final_Submission_Software_Engineering_Project
+
+3. Install dependencies via Composer:
+```bash
+Copy code
+composer install
+
 
 ---
 
@@ -108,11 +128,10 @@ Contributions are welcome! Follow these steps to contribute:
 3. Commit your changes:
    ```bash
     git commit -m "Add feature-name"
-   ```
+   
 4. Push the branch and submit a pull request:
    ```bash
     git push origin feature-name
-   ```
 
 ---
 
