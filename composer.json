@@ -10,10 +10,10 @@
   ],
   "license": "MIT",
   "require": {
-    "php": "^8.1",  // Adjust PHP version if needed
-    "monolog/monolog": "^2.0",  // For logging
-    "symfony/console": "^5.0",  // For CLI tools if needed
-    "guzzlehttp/guzzle": "^7.0",  // For HTTP requests
+    "php": "^8.1",  //Adjust PHP version if needed
+    "monolog/monolog": "^2.0",  //For logging
+    "symfony/console": "^5.0",  //For CLI tools if needed
+    "guzzlehttp/guzzle": "^7.0",  #For HTTP requests
     "phpunit/phpunit": "^9.5"    // For running unit tests
   },
   "require-dev": {
