@@ -10,30 +10,30 @@
   ],
   "license": "MIT",
   "require": {
-    "php": "^8.1",  //Adjust PHP version if needed
-    "monolog/monolog": "^2.0",  //For logging
-    "symfony/console": "^5.0",  //For CLI tools if needed
-    "guzzlehttp/guzzle": "^7.0",  #For HTTP requests
-    "phpunit/phpunit": "^9.5"    // For running unit tests
+    "php": "^8.1",
+    "monolog/monolog": "^2.0",
+    "symfony/console": "^5.0",
+    "guzzlehttp/guzzle": "^7.0",
+    "phpunit/phpunit": "^9.5"
   },
   "require-dev": {
-    "phpstan/phpstan": "^1.0",  // Static analysis for development
-    "mockery/mockery": "^1.4",   // Mocking library for unit tests
-    "friendsofphp/php-cs-fixer": "^3.0"  // For code style checks
+    "phpstan/phpstan": "^1.0",
+    "mockery/mockery": "^1.4",
+    "friendsofphp/php-cs-fixer": "^3.0"
   },
   "autoload": {
     "psr-4": {
-      "App\\": "src/"  // Adjust this based on where your PHP classes are stored
+      "App\\": "src/"
     }
   },
   "scripts": {
     "post-install-cmd": [
-      "php artisan key:generate"  // Laravel-specific example, adjust or remove if not needed
+      "php artisan key:generate"
     ],
-    "test": "phpunit --configuration phpunit.xml"  // Runs PHPUnit tests
+    "test": "phpunit --configuration phpunit.xml"
   },
   "config": {
     "optimize-autoloader": true,
-    "preferred-install": "dist"  // Prefer dist archives for faster installations
+    "preferred-install": "dist"
   }
 }
