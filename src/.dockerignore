@@ -1,0 +1,30 @@
+# Ignore node modules (if applicable)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Ignore log files and temp files
+*.log
+*.tmp
+
+# Ignore environment configuration
+.env
+
+# Ignore IDE or editor-specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore Git and version control folders
+.git
+.gitignore
+
+# Ignore database files and backups
+*.sql
+*.sqlite
+*.db
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
