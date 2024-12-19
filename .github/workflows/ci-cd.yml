@@ -25,11 +25,11 @@ jobs:
           --health-timeout=5s
           --health-retries=3
     steps:
-      # Step 1: Checkout the repository code
+      #Step 1: Checkout the repository code
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Step 2: Set up PHP environment
+      #Step 2: Set up PHP environment
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -38,11 +38,11 @@ jobs:
           ini-values: post_max_size=256M, upload_max_filesize=256M
           coverage: none
 
-      # Step 3: Install Composer dependencies
+      #Step 3: Install Composer dependencies
       - name: Install dependencies
         run: composer install --no-progress --no-suggest --prefer-dist
 
-      # Step 4: Create a .env file for the database connection
+      #Step 4: Create a .env file for the database connection
       - name: Create .env file
         run: |
           echo "DB_CONNECTION=mysql" > .env
@@ -52,11 +52,11 @@ jobs:
           echo "DB_USERNAME=root" >> .env
           echo "DB_PASSWORD=root" >> .env
 
-      # Step 5: Run database migrations (if applicable)
+      #Step 5: Run database migrations (if applicable)
       - name: Run migrations
         run: php artisan migrate
 
-      # Step 6: Run tests
+      #Step 6: Run tests
       - name: Run PHPUnit tests
         run: ./vendor/bin/phpunit --testdox
 
@@ -65,12 +65,12 @@ jobs:
     needs: build
 
     steps:
-      # Step 1: Checkout the code
+      #Step 1: Checkout the code
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Step 2: Deploy the application (you can use rsync, FTP, or other deployment tools)
-      # For example, deploying to a server via SSH
+      #Step 2: Deploy the application (you can use rsync, FTP, or other deployment tools)
+      #For example, deploying to a server via SSH
       - name: Deploy to Server
         run: |
           echo "Deploying application to server..."
