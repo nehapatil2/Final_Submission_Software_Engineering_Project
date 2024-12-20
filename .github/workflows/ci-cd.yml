@@ -33,7 +33,7 @@ jobs:
     # Run PHPUnit tests
     - name: Run PHPUnit tests
       run: |
-        php vendor/bin/phpunit
+        php vendor/bin/phpunit.xml
         # ./vendor/bin/phpunit --configuration phpunit.xml
 
   # Optional: Deploy to a server or cloud provider
