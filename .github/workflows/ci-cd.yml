@@ -21,7 +21,7 @@ jobs:
     - name: Set up PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.1'  # You can change this to the PHP version you're using
+        php-version: '5.2'  # You can change this to the PHP version you're using
         extensions: mbstring, xml, bcmath, curl  # Add any other required PHP extensions
 
     # Install dependencies using Composer
@@ -33,7 +33,7 @@ jobs:
     # Run PHPUnit tests
     - name: Run PHPUnit tests
       run: |
-        ./vendor/bin/phpunit.xml --configuration phpunit.xml
+        ./vendor/bin/phpunit --configuration phpunit.xml
 
   # Optional: Deploy to a server or cloud provider
   deploy:
@@ -47,7 +47,7 @@ jobs:
     - name: Set up PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.1'  # Match the PHP version as per your project requirements
+        php-version: '5.2'  # Match the PHP version as per your project requirements
         extensions: mbstring, xml, bcmath, curl  # Add other required extensions
 
     # Example deployment step (adjust for your deployment process)
