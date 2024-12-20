@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $comment = $_POST["comment"];
 
     // Connect to the database
-    $servername = "localhost";
+    $servername = "127.0.0.1";
     $username_db = "root";
     $password_db = "";
     $dbname = "blog_db";

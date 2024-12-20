@@ -102,7 +102,7 @@ if (!isset($_SESSION["user_id"])) {
     </div>
     <div class="content">
         <?php
-        $servername = "localhost";
+        $servername = "127.0.0.1";
         $username = "root";
         $password = "";
         $dbname = "blog_db";

@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      // Assuming you have a hidden input field in the form for post_id
 
     // Save comment to the database (you'll need to adjust this based on your database structure)
-    $servername = "localhost";
+    $servername = "127.0.0.1";
     $username = "root";
     $password = "";
     $dbname = "blog_db";
