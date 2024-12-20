@@ -1,45 +1,72 @@
-name: PHP CI/CD Pipeline
+name: CI/CD Pipeline
 
 on:
   push:
     branches:
-      - main  # Trigger on push to the main branch
+      - main
   pull_request:
     branches:
-      - main  # Trigger on pull requests to the main branch
+      - main
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Use the latest Ubuntu environment
+    runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the code
-      - name: Checkout code
-        uses: actions/checkout@v2
+    # Checkout the code from the repository
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      # Step 2: Set up PHP
-      - name: Set up PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.1'  # Specify PHP version (adjust as needed)
-          extensions: mbstring, xml, bcmath  # Common PHP extensions (add/remove as needed)
+    # Set up PHP environment
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.1'  # You can change this to the PHP version you're using
+        extensions: mbstring, xml, bcmath, curl  # Add any other required PHP extensions
 
-      # Step 3: Install Composer
-      - name: Install Composer
-        run: |
-          curl -sS https://getcomposer.org/installer | php
-          sudo mv composer.phar /usr/local/bin/composer
+    # Install dependencies using Composer
+    - name: Install dependencies
+      run: |
+        curl -sS https://getcomposer.org/installer | php
+        php composer.phar install
 
-      # Step 4: Install PHP dependencies
-      - name: Install Composer dependencies
-        run: composer install --no-interaction --prefer-dist
+    # Run PHPUnit tests
+    - name: Run PHPUnit tests
+      run: |
+        ./vendor/bin/phpunit --configuration phpunit.xml
 
-      # Step 5: Run PHPUnit tests
-      - name: Run PHPUnit tests
-        run: ./vendor/bin/phpunit --configuration phpunit.xml
+  # Optional: Deploy to a server or cloud provider
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build  # Ensure that the deploy job only runs if the build job is successful
 
-      # Step 6: Push changes (if necessary)
-      - name: Push changes (if applicable)
-        run: git push origin main
-        # You may need to configure SSH keys or token authentication for pushing
-        # This step is optional and is required only if your pipeline needs to push changes
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.1'  # Match the PHP version as per your project requirements
+        extensions: mbstring, xml, bcmath, curl  # Add other required extensions
+
+    # Example deployment step (adjust for your deployment process)
+    - name: Deploy to server
+      env:
+        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+      run: |
+        echo "Deploying to server..."
+        # Add deployment steps like rsync, scp, FTP, or using a specific CLI tool
+        # Example for SSH Deployment:
+        # ssh -i $DEPLOY_KEY user@yourserver.com "cd /path/to/project && git pull && composer install"
+
+    # Optionally, notify a Slack channel or other tools about the deployment status
+    - name: Notify deployment success
+      if: success()
+      uses: slackapi/slack-github-action@v1
+      with:
+        payload: |
+          {
+            "channel": "#your-slack-channel",
+            "text": "Deployment Successful!"
+          }
