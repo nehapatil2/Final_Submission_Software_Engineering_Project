@@ -3,8 +3,9 @@
     "description": "A PHP project for managing blog posts.",
     "type": "project",
     "require": {
-        "phpunit/phpunit": "^5.0"
+        "unloq/loglet": "dev-master"
     },
     "license": "MIT",
     "minimum-stability": "dev"
 }
+
