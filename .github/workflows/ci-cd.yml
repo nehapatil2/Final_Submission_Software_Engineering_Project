@@ -61,13 +61,3 @@ jobs:
         # Example for SSH Deployment:
         # ssh -i $DEPLOY_KEY user@yourserver.com "cd /path/to/project && git pull && composer install"
 
-    # Optionally, notify a Slack channel or other tools about the deployment status
-    - name: Notify deployment success
-      if: success()
-      uses: slackapi/slack-github-action@v1
-      with:
-        payload: |
-          {
-            "channel": "#your-slack-channel",
-            "text": "Deployment Successful!"
-          }
