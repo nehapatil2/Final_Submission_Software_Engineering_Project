@@ -1,25 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<phpunit bootstrap="vendor/autoload.php" colors="true" verbose="true">
-    
-    <!-- Directories where tests are located -->
+<phpunit bootstrap="vendor/autoload.php"
+         colors="true"
+         verbose="true"
+         stopOnFailure="false">
+    <!-- Default configuration for PHPUnit -->
     <testsuites>
         <testsuite name="Application Test Suite">
-            <directory>./test</directory>  <!-- Path to your test directory -->
+            <!-- Directory containing your test classes -->
+            <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>
-    
-    <!-- Configure the PHPUnit environment -->
-    <php>
-        <ini name="display_errors" value="1"/>
-        <ini name="error_reporting" value="-1"/>
-    </php>
-    
-    <!-- Set up logging and result output -->
-    <logging>
-        <!-- Log test results to a file -->
-        <log type="testdox-html" target="tests/coverage/index.html"/>
-        <log type="junit" target="tests/results.xml"/>
-    </logging>
 
+    <!-- Optional: Configure PHP settings for tests -->
+    <php>
+        <!-- Set up error reporting to help during testing -->
+        <ini name="display_errors" value="1"/>
+        <ini name="error_reporting" value="E_ALL"/>
+    </php>
+
+    <!-- Optional: Configure PHPUnit-specific parameters -->
+    <extensions>
+        <extension class="PHPUnit\Extensions\Database\Connection" />
+        <!-- Add any custom extensions if needed -->
+    </extensions>
+
+    <!-- Optional: Configure coverage settings (if you use PHPUnit code coverage) -->
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">./src</directory>
+        </include>
+        <exclude>
+            <directory suffix=".php">./tests</directory>
+        </exclude>
+    </coverage>
 </phpunit>
